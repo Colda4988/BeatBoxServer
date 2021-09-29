@@ -1,17 +1,16 @@
-var app = require('http').createServer(handler)
-var fs = require('fs');
+var express = require('express')
 
-app.listen(3000);
+// express 는 함수이므로, 반환값을 변수에 저장한다.
+var app = express()
 
-function handler (req, res) {
-  fs.readFile(__dirname + '/index.html',
-  function (err, data) {
-      if (err) {
-          res.writeHead(500);
-          return res.end('Error loading index.html');
-      }
+// 3000 포트로 서버 오픈
+app.listen(4444, function() {
+    console.log("start! express server on port 4444")
+})
 
-      res.writeHead(200);
-      res.end(data);
-  });
-}
+// request 와 response 라는 인자를 줘서 콜백 함수를 만든다.
+// localhost:3000 브라우저에 res.send() 내부의 문자열이 띄워진다.
+
+app.get('/', function(req,res) {
+  res.send("<h1>hi friend!</h1>")
+})
