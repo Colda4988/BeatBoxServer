@@ -1,7 +1,7 @@
 var app = require('http').createServer(handler)
 var fs = require('fs');
 
-app.listen(4444);
+app.listen(3000);
 
 function handler (req, res) {
   fs.readFile(__dirname + '/index.html',
@@ -15,11 +15,3 @@ function handler (req, res) {
       res.end(data);
   });
 }
-
-// socket.io 스타트
-var io = require('socket.io')(app);
-
-// 클라이언트 컨넥션 이벤트 처리
-io.on('connection', function (socket) {
-  console.log('Hello, socket.io~');
-});
