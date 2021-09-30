@@ -1,0 +1,25 @@
+[General]
+Madeby:Kyoee01
+Artist:Plum
+Title:MaelStrome
+MapId:official
+Audio:Plum - MaelStrome.mp3
+[timings]
+0,b,195
+[notes]
+1100,s,r,0
+1200,s,r,1
+1300,s,r,2
+1400,s,r,3
+2100,s,l,0
+2200,s,l,1
+2300,s,l,2
+2400,s,l,3
+3100,s,u,0
+3200,s,u,1
+3300,s,u,2
+3400,s,u,3
+4100,s,d,0
+4200,s,d,1
+4300,s,d,2
+4400,s,d,3
